@@ -1,0 +1,13 @@
+<h1> LOOK AT MA BLEET </h1>
+
+<p> Posted on: {{BleetShowViewModel.bleet.updated_at | date}}</p>
+<h2>{{BleetShowViewModel.bleet.content}}</h2>
+<hp>likes: {{BleetShowViewModel.bleet.likes}}</p>
+
+
+<h2> update this bleet: </h2>
+
+<form data-ng-submit="BleetShowViewModel.update()">
+  <input placeholder="content" data-ng-model="BleetShowViewModel.bleet.content" />
+  <button type="submit">Update</button>
+</form>

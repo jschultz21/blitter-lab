@@ -1,0 +1,11 @@
+<h1> LOOK AT ALL THESE BLEETS WOW </h1>
+
+<div data-ng-repeat="bleet in BleetIndexViewModel.bleets">
+  {{bleet.updated_at | date}}
+  <p><a data-ui-sref="bleetShow({id: bleet.id})"> {{bleet.content}}</a></p>
+  <button data-ng-click = "BleetIndexViewModel.destroy(bleet)"> Delete</button>
+  <p> likes: {{bleet.likes}}</p>
+</div>
+
+
+<a data-ui-sref="bleetNew"> Add a new bleet!! </a>
