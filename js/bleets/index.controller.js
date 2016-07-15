@@ -19,5 +19,16 @@
         $state.reload();
       })
     }
+
+    this.like=function(bleet){
+      console.log(bleet.likes)
+      bleet.likes +=1;
+      console.log("new likes=" + bleet.likes);
+      bleet.$update(bleet).then(function(){
+        $state.reload();
+      })
+
+
+    };
   }
 }());

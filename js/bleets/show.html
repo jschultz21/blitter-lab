@@ -5,9 +5,9 @@
 <hp>likes: {{BleetShowViewModel.bleet.likes}}</p>
 
 
-<h2> update this bleet: </h2>
+<h2> <a data-ng-click="form=!form"> click here to update this bleet!!</a> </h2>
 
-<form data-ng-submit="BleetShowViewModel.update()">
+<form  data-ng-show="form" data-ng-submit="BleetShowViewModel.update()">
   <input placeholder="content" data-ng-model="BleetShowViewModel.bleet.content" />
   <button type="submit">Update</button>
 </form>

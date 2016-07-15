@@ -3,8 +3,8 @@
 <div data-ng-repeat="bleet in BleetIndexViewModel.bleets">
   {{bleet.updated_at | date}}
   <p><a data-ui-sref="bleetShow({id: bleet.id})"> {{bleet.content}}</a></p>
+  <p> likes: {{bleet.likes}}</p> <button type="button" name="like" ng-click="BleetIndexViewModel.like(bleet)">like dis bleet</button>
   <button data-ng-click = "BleetIndexViewModel.destroy(bleet)"> Delete</button>
-  <p> likes: {{bleet.likes}}</p>
 </div>
 
 

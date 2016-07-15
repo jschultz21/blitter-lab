@@ -13,6 +13,10 @@
 
   function RouterFunction ($stateProvider){
     $stateProvider
+    .state("welcome",{
+      url: "",
+      templateUrl: "welcome.html",
+    })
     .state("bleetIndex", {
       url: "/bleets",
       templateUrl: "js/bleets/index.html",
